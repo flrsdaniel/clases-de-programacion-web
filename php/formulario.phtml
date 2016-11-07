@@ -1,0 +1,31 @@
+<?php
+include("db.php");
+
+///inicio de Actualizar
+if(isset($_GET['id'])){
+	$id=$_GET['id'];
+	$sql_u = "SELECT * FROM estudiantes WHERE id = $id";
+	$result_u = select($sql_u);
+	while ($dato = mysql_fetch_array($result_u)) {
+?>
+<form name="form" id="form" method="post" action="index.php?m=2">
+<input type="hidden" name="m" value="99">
+<input type="hidden" name="id" value="<?php echo $dato['id']?>">
+	<label for="nombre">Nombre</label>
+	<input type="text" name="nombre" id="nombre" value='<?php echo @$dato['nombre']?>'><br>
+	<label for="apellido">Apellido</label>
+	<input type="text" name="apellido" id="apellido" value='<?php echo @$dato['apellido']?>'><br>
+	<label for="cedula">Cedula</label>
+	<input type="text" name="cedula" id="cedula" value='<?php echo @$dato['cedula']?>'><br>
+	<label for="edad">Edad</label>
+	<input type="number" name="edad" id="edad" value='<?php echo @$dato['edad']?>'><br>
+	<label for="fecnac">Fecha de Nacimiento</label>
+	<input type="date" name="fecnac" id="fecnac" value='<?php echo @$dato['fecnac']?>'><br>
+	</form>
+	<button class="btn-enviar" onclick="valida();">Enviar</button>
+<table cellspacing=""></table>
+<?php
+	
+	}
+}///fin de Actualizar
+?>

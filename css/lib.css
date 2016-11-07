@@ -1,0 +1,41 @@
+body{
+	text-align: center;
+	font-style: verdana;
+}
+.pie{
+	color: #6f6f6f;
+}
+.content{
+	height: 300px;
+}
+label{
+	font-size: 12px;
+}
+.btn-enviar{
+	background-color: blue;
+	color: yellow;
+	border-color: black;
+
+}
+.btn-enviar:hover{
+	font-size: 18px;
+	background-color: red;	
+}
+.btn-menu{
+	margin: 0 5px;
+}
+.listar{
+	margin: auto; 
+	border: 1px solid black;
+	border-spacing: 1px;
+
+}
+.listar-bgt{
+	background-color: white;
+}
+.listar-bgf{
+	background-color: grey;
+}
+.titulo_tr{
+	font-weight: bold;
+}
